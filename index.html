@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Manager - Logiciel de gestion d'école</title>
+    <meta
+      name="description"
+      content="Zéro paperasse. Zéro complications. Le logiciel le plus simple pour gérer votre école."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #0026b9;
+        --primary-hover: #001e96;
+        --text: #111827;
+        --text-light: #4b5563;
+        --bg: #ffffff;
+        --border: #e5e7eb;
+        --star: #fbbf24;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+
+      .logo img {
+        height: 50px;
+        width: auto;
+        transition: transform 0.2s ease;
+      }
+
+      .logo:hover img {
+        transform: scale(1.02);
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+      }
+
+      .subtitle {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+        color: var(--text-light);
+        margin-bottom: 3rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.875rem 1.75rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.125rem;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-hover);
+      }
+
+      .btn-outline {
+        background: white;
+        color: var(--primary);
+        border: 2px solid var(--border);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--primary);
+      }
+
+      .social-proof {
+        margin-bottom: 4rem;
+      }
+
+      .stars {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        margin-bottom: 0.75rem;
+      }
+
+      .stars svg {
+        width: 20px;
+        height: 20px;
+        fill: var(--star);
+      }
+
+      .trust-text {
+        font-weight: 500;
+        color: var(--text-light);
+        font-size: 1.1rem;
+      }
+
+      .hero-preview {
+        background: #000;
+        padding: 1rem;
+        border-radius: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero-preview img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        display: block;
+      }
+
+      @media (max-width: 640px) {
+        .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="logo" aria-label="School Manager Accueil">
+        <img src="logo.png" alt="School Manager Logo" />
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Zéro paperasse. Zéro complications.</h1>
+        <p class="subtitle">
+          Le logiciel le plus simple pour gérer votre école
+        </p>
+
+        <div class="actions">
+          <a href="#" class="btn btn-primary">
+            <span>Télécharger la Démo</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a href="#" class="btn btn-outline">
+            <span>Comment Installer</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+              ></path>
+              <polygon
+                points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+              ></polygon>
+            </svg>
+          </a>
+        </div>
+
+        <div class="social-proof">
+          <div class="stars" aria-label="5 étoiles sur 5">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </div>
+          <p class="trust-text">
+            <strong>+100</strong> Centres/écoles algériens nous font confiance
+          </p>
+        </div>
+
+        <div class="hero-preview">
+          <img
+            src="./screenshot.png"
+            alt="Aperçu de l'interface School Manager montrant la gestion des élèves et des paiements"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
