@@ -3,183 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>School Manager - Logiciel de gestion d'école</title>
+    <title id="page-title">School Manager - Logiciel de gestion d'école</title>
     <meta
+      id="meta-desc"
       name="description"
       content="Zéro paperasse. Zéro complications. Le logiciel le plus simple pour gérer votre école."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --primary: #0026b9;
-        --primary-hover: #001e96;
-        --text: #111827;
-        --text-light: #4b5563;
-        --bg: #ffffff;
-        --border: #e5e7eb;
-        --star: #fbbf24;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Inter", system-ui, -apple-system, sans-serif;
-        background-color: var(--bg);
-        color: var(--text);
-        line-height: 1.5;
-        text-align: center;
-        padding: 2rem 1rem;
-      }
-
-      header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 3rem;
-      }
-
-      .logo img {
-        height: 50px;
-        width: auto;
-        transition: transform 0.2s ease;
-      }
-
-      .logo:hover img {
-        transform: scale(1.02);
-      }
-
-      main {
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      h1 {
-        font-size: clamp(2.5rem, 8vw, 4.5rem);
-        font-weight: 800;
-        letter-spacing: -0.03em;
-        margin-bottom: 1rem;
-        line-height: 1.1;
-      }
-
-      .subtitle {
-        font-size: clamp(1.25rem, 4vw, 1.75rem);
-        color: var(--text-light);
-        margin-bottom: 3rem;
-      }
-
-      .actions {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 3rem;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.875rem 1.75rem;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1.125rem;
-        text-decoration: none;
-        transition: 0.2s;
-      }
-
-      .btn-primary {
-        background: var(--primary);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        background: var(--primary-hover);
-      }
-
-      .btn-outline {
-        background: white;
-        color: var(--primary);
-        border: 2px solid var(--border);
-      }
-
-      .btn-outline:hover {
-        border-color: var(--primary);
-      }
-
-      .social-proof {
-        margin-bottom: 4rem;
-      }
-
-      .stars {
-        display: flex;
-        justify-content: center;
-        gap: 4px;
-        margin-bottom: 0.75rem;
-      }
-
-      .stars svg {
-        width: 20px;
-        height: 20px;
-        fill: var(--star);
-      }
-
-      .trust-text {
-        font-weight: 500;
-        color: var(--text-light);
-        font-size: 1.1rem;
-      }
-
-      .hero-preview {
-        background: #000;
-        padding: 1rem;
-        border-radius: 2rem;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      }
-
-      .hero-preview img {
-        width: 100%;
-        height: auto;
-        border-radius: 1rem;
-        display: block;
-      }
-
-      @media (max-width: 640px) {
-        .btn {
-          width: 100%;
-          justify-content: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
-      <a class="logo" aria-label="School Manager Accueil">
+      <a href="#" class="logo" aria-label="School Manager Accueil">
         <img src="logo.png" alt="School Manager Logo" />
+        <span>School Manager</span>
       </a>
+
+      <div class="header-right">
+        <div class="lang-selector">
+          <button class="btn-lang-toggle">
+            <span data-lang="fr">FR</span>
+            <span data-lang="ar">AR</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              style="width: 12px; height: 12px"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="#fr" onclick="setLang('fr')">Français</a>
+            <a href="#ar" onclick="setLang('ar')">العربية</a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
-        <h1>Zéro paperasse. Zéro complications.</h1>
-        <p class="subtitle">
-          Le logiciel le plus simple pour gérer votre école
+        <div class="social-proof-top">
+          <div class="stars-top">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </div>
+          <div class="trust-top-text">
+            <span data-lang="fr">4,8/5 par +100 écoles en Algérie</span>
+            <span data-lang="ar">4,8/5 من قبل +100 مدرسة في الجزائر</span>
+          </div>
+        </div>
+
+        <h1 data-lang="fr">La solution N°1 pour gérer votre école</h1>
+        <h1 data-lang="ar">الحل رقم 1 لتسيير مدرستك</h1>
+
+        <p class="subtitle" data-lang="fr">
+          Gérez, optimisez et pilotez votre établissement n'aura jamais été
+          aussi simple.
+        </p>
+        <p class="subtitle" data-lang="ar">
+          تسيير، تحسين وقيادة مدرستك لم يكن أبداً بهذه السهولة.
         </p>
 
         <div class="actions">
           <a
-            href="https://github.com/youcefzaid/sm/releases/download/prod/School.Manager-0.1.0.Setup.exe"
+            href="https://github.com/youcefzaid/sm/releases/download/n/School.Manager-0.1.0.Setup.exe"
             class="btn btn-primary"
           >
-            <span>Télécharger la Démo</span>
+            <span data-lang="fr">Télécharger</span>
+            <span data-lang="ar">تحميل</span>
             <svg
               width="20"
               height="20"
@@ -200,7 +122,8 @@
             target="_blank"
             class="btn btn-outline"
           >
-            <span>Comment Installer</span>
+            <span data-lang="fr">Comment installer</span>
+            <span data-lang="ar">كيفية التثبيت</span>
             <svg
               width="20"
               height="20"
@@ -211,56 +134,85 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path
-                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
-              ></path>
-              <polygon
-                points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
-              ></polygon>
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
           </a>
         </div>
 
-        <div class="social-proof">
-          <div class="stars" aria-label="5 étoiles sur 5">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-              />
-            </svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-              />
-            </svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-              />
-            </svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-              />
-            </svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-              />
-            </svg>
-          </div>
-          <p class="trust-text">
-            <strong>+100</strong> Centres/écoles algériens nous font confiance
-          </p>
-        </div>
+        <p class="trial-info">
+          <span data-lang="fr">10 jours d'essai gratuit</span>
+          <span data-lang="ar">10 أيام تجربة مجانية</span>
+        </p>
 
-        <div class="hero-preview">
+        <div class="app-preview">
           <img
-            src="./screenshot.png"
-            alt="Aperçu de l'interface School Manager montrant la gestion des élèves et des paiements"
+            id="hero-img"
+            src="screenshot-fr.png"
+            alt="Aperçu School Manager"
           />
         </div>
       </section>
     </main>
+
+    <a
+      href="https://wa.me/+213540726499"
+      class="whatsapp-widget"
+      target="_blank"
+      aria-label="WhatsApp"
+    >
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      const translations = {
+        fr: {
+          title: "School Manager - Logiciel de gestion d'école",
+          desc: "Zéro paperasse. Zéro complications. Le logiciel le plus simple pour gérer votre école.",
+          img: "screenshot-fr.png",
+        },
+        ar: {
+          title: "مدير المدرسة - برنامج تسيير المدارس",
+          desc: "صفر أوراق. صفر تعقيدات. أسهل برنامج لتسيير مدرستك.",
+          img: "screenshot-ar.png",
+        },
+      };
+
+      function setLang(lang) {
+        if (!translations[lang]) lang = "fr";
+
+        document.documentElement.lang = lang;
+        document.title = translations[lang].title;
+        const metaDesc = document.getElementById("meta-desc");
+        if (metaDesc) metaDesc.content = translations[lang].desc;
+        const heroImg = document.getElementById("hero-img");
+        if (heroImg) heroImg.src = translations[lang].img;
+
+        localStorage.setItem("preferred-lang", lang);
+
+        if (window.location.hash !== "#" + lang) {
+          history.replaceState(null, null, "#" + lang);
+        }
+      }
+
+      function handleRouting() {
+        const hash = window.location.hash.replace("#", "");
+        if (hash === "fr" || hash === "ar") {
+          setLang(hash);
+        } else {
+          const savedLang = localStorage.getItem("preferred-lang");
+          const browserLang = navigator.language || navigator.userLanguage;
+          const defaultLang =
+            savedLang || (browserLang.startsWith("ar") ? "ar" : "fr");
+          setLang(defaultLang);
+        }
+      }
+
+      window.addEventListener("hashchange", handleRouting);
+      handleRouting();
+    </script>
   </body>
 </html>
